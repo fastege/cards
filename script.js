@@ -47,12 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
                       <div class="flip-card-inner" tabindex="0">
                           <div class="flip-card-front">
                               <div class="flip-card-front-img">
-                                  <img src="${card.front}" alt="" class="src" loading="lazy">
+                                  <img src="${card.front}" alt="" class="src" loading="lazy" draggable="false">
                               </div>
                           </div>
                           <div class="flip-card-back">
                               <div class="flip-card-back-img">
-                                  <img src="${card.back}" alt="" class="src" loading="lazy">
+                                  <img src="${card.back}" alt="" class="src" loading="lazy" draggable="false">
                               </div>
                           </div>
                       </div>
@@ -77,9 +77,9 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    backToTopBtn.style.display = "block";
+    backToTopBtn.classList.add("show");
   } else {
-    backToTopBtn.style.display = "none";
+    backToTopBtn.classList.remove("show");
   }
 }
 
